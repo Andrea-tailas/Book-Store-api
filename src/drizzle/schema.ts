@@ -7,7 +7,7 @@ export const booksTable = pgTable('books', {
     id: serial('id').primaryKey(),
     title: text('title').notNull(),
     author: text('author').notNull(),
-    publicationYear: decimal('publication_year').notNull()
+    publicationYear: text('publication_year').notNull()
   });
   
 
