@@ -5,7 +5,7 @@ import { pgTable, text, integer } from "drizzle-orm/pg-core";
 export const booksTable = pgTable('books', {
     id: integer('id').primaryKey(),
     name: text('name').notNull(),
-    authors: text('author_id').notNull(),
+    authors: text('authors').notNull(),
     publicationYear: integer('publication_year').notNull()
   });
   
