@@ -1,2 +1,13 @@
 ###
 GET http://localhost:8000/api/book/1
+
+###
+POST http://localhost:8000/api/book
+Content-Type: application/json
+
+{
+    "id":3,
+    "name":"The River Between",
+    "author":"Ngugi Thiong'o",
+    "publication Year":2002
+}
