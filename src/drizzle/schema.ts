@@ -1,9 +1,10 @@
 
-import { pgTable, text, integer } from "drizzle-orm/pg-core";
+
+import { pgTable, text, integer,serial } from "drizzle-orm/pg-core";
 
 
 export const booksTable = pgTable('books', {
-    id: integer('id').primaryKey(),
+    id: serial('id').primaryKey(),
     title: text('title').notNull(),
     author: text('author').notNull(),
     publicationYear: integer('publication_year').notNull()
