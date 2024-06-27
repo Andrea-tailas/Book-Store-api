@@ -9,5 +9,5 @@ Content-Type: application/json
     "id":3,
     "name":"The River Between",
     "author":"Ngugi Thiong'o",
-    "publication Year":2002
+    "publicationYear":2002
 }
