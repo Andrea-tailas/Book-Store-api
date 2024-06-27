@@ -2,7 +2,7 @@ import "dotenv/config";
 import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
 import { booksRouter } from "./books/books.router";
-import { authorsRouter } from "./author/author.router";
+
 
 const app = new Hono()
 
@@ -15,7 +15,7 @@ app.get('/ok',async (c) => {
 
 //custom route
 app.route('/api', booksRouter)
-app.route('/api', authorsRouter)
+
 
 
 
