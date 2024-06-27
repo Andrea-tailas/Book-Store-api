@@ -1,13 +1,13 @@
 
 
-import { pgTable, text, integer,serial } from "drizzle-orm/pg-core";
+import { pgTable, text, decimal,serial } from "drizzle-orm/pg-core";
 
 
 export const booksTable = pgTable('books', {
     id: serial('id').primaryKey(),
     title: text('title').notNull(),
     author: text('author').notNull(),
-    publicationYear: integer('publication_year').notNull()
+    publicationYear: decimal('publication_year').notNull()
   });
   
 
