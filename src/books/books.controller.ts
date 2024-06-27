@@ -30,7 +30,8 @@ export const createBk = async (c: Context) => {
     try {
         const user = await c.req.json();
         const createdUser = await addBook(user);
-
+        let year=Number(user.publicationYear);
+        user.publicationYear=year;
 
         if (!createdUser) return c.text("Book not created", 404);
         return c.json({ msg: createdUser }, 201);
@@ -49,9 +50,9 @@ export const updateBk = async (c: Context) => {
         
         const searchedUser = await getBooksId(id);
         if (searchedUser == undefined) return c.text("Book not found", 404);
-        // get the data and update it
+    
         const res = await updateBook(id, user);
-        // return a success message
+   
         if (!res) return c.text("Book not updated", 404);
 
         return c.json({ msg: res }, 201);
