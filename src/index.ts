@@ -7,7 +7,7 @@ import {cors} from 'hono/cors'
 const app = new Hono()
 
 app.use('*',cors({
-  origin:'https://book-store-api-8rtp.onrender.com',
+  origin:"https://book-store-frontend-beryl.vercel.app",
   allowMethods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowHeaders: ['Content-Type', 'Authorization'],
 
